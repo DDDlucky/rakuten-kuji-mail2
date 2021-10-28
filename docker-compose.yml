@@ -1,0 +1,13 @@
+version: "3"
+services:
+  selenium:
+    build: ./
+    image: selenium
+    container_name: selenium
+    volumes:
+      - ./code:/code
+      # - /tmp/.X11-unix:/tmp/.X11-unix
+    working_dir: /code
+    environment:
+      # DISPLAY: unix$DISPLAY
+    tty: true
